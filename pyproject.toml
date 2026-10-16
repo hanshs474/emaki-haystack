@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "emaki-haystack"
+version = "0.1.0"
+description = "Haystack components for emaki (emaki.ai), the Japanese-language AI video generator for Seedance 2.5 and Seedance 2.0: text to video, image to video and AI images in a pipeline"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "emaki" }]
+keywords = ["haystack", "ai", "video-generation", "text-to-video", "image-to-video", "seedance", "seedance-2-5", "pipeline", "emaki"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Natural Language :: Japanese",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = ["haystack-ai>=2.0", "emaki>=0.1.0"]
+
+[project.urls]
+Homepage = "https://emaki.ai/?utm_source=pypi-haystack&utm_medium=package"
+"Seedance 2.5" = "https://emaki.ai/seedance-2-5"
+Documentation = "https://emaki.readthedocs.io/en/latest/integrations/haystack/"
+Source = "https://github.com/hanshs474/emaki-haystack"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/emaki_haystack"]
